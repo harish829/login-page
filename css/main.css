@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.carousel__contents {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel__slide {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
+
+/* This code works if the width of one slide is 800px */
+.carousel__slide:nth-child(2) {
+    left: 800px;
+  }
+  
+  .carousel__slide:nth-child(3) {
+    left: 1600px;
+  }
+
+  .gallery {
+    display: flex;
+    gap: 4px;
+  }
+  .card {
+    position: relative;
+    left: 0;
+    width: 80px;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #fff;
+    height: 80px;
+    transition: 0.4s ease-in-out;
+    flex: 1;
+    color: #fff;
+  }
+
+
+  .card:nth-child(1) {
+    background-color: rgb(0, 182, 122);
+  }
+  .card:nth-child(2) {
+    background-color: rgb(182, 100, 0);
+  }
+  .card:nth-child(3) {
+    background-color: rgb(53, 0, 128);
+  }
+  .card:nth-child(4) {
+    background-color: rgb(14, 164, 0);
+  }
+  .card:nth-child(5) {
+    background-color: rgb(182, 0, 170);
+  }
+
+  .card:hover {
+
+    flex-grow: 2;
+    /* font-weight: bold; */
+    cursor: pointer;
+
+  }
+
+  /* .parent {
+    display: flex;
+    gap: 4px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 80px;
+    height: 80px;
+  }
+
+  .parent:first-child {
+    background-color: rgb(53, 0, 128);
+  }
+  .parent:nth-child(2) {
+    background-color: rgb(14, 164, 0);
+  }
+  .parent:nth-child(3) {
+    background-color: rgb(182, 0, 170);
+  } */
+
+
+  .beforeClass {
+    width: 500px;
+    height: 200px;
+    background-color: blue;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+/*    
+    border-left-color: red;
+    border-style: dotted;
+    padding: 2px;
+    border-width: 0 0 0 2px; */
+  }
+
+  .beforeClass::before, .beforeClass::after {
+    content: '' ;
+    position: absolute;
+  }
+
+  .beforeClass::before {
+    border-left-width: 2px;
+    border-left-color: red;
+    border-style: dotted;
+    left: -2px;
+    top: 0;
+    height: 100%;
+  }
+
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  li a {
+    /* pointer-events: none; */
+    text-decoration: none;
+  }
+
+form {
+  width: 400px;
+  margin: 24px auto;
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+ 
+}
+
+input {
+  width: 100%;
+  margin-bottom: 16px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid #666;
+  padding: 5px;
+  color: #fff;
+  background-color: transparent;
+}
+button {
+  width: 100%;
+  height: 32px;
+  margin-bottom: 16px;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: red;
+  background-image: url(../images/cross.png);
+}
+
+input:invalid:not(:placeholder-shown), input:valid:not(:placeholder-shown) {
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: right;
+  /* background-position-x: 27.8em; */
+  background-position-y: 0.2em;
+}
+
+input:valid:not(:placeholder-shown) {
+  background-image: url(../images/check.png);
+
+}
+input:invalid:not(:placeholder-shown) + p {
+  color: red;
+  margin-bottom: 16px;
+  
+}
+
+input:invalid ~ button[type="submit"] {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.submit , .oss {
+  border-radius: 4px;
+  background-color: #000560;
+  border: 1px solid #fff;
+  cursor: pointer;
+  color: #fff;
+}
+
+.submit {
+  margin-top: 16px;
+}
+.or {
+  margin-bottom: 16px;
+}
+
+
+/* image section start here */
+
+img {
+  width: 100%;
+  margin-bottom: 1em;
+  /* max-width: 300px;
+  object-fit: cover; */
+}
+
+.list {
+columns: 300px;
+}
